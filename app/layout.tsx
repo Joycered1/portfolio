@@ -21,11 +21,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Joyce Eboh — Senior Product Designer",
   description:
-    "Senior product designer specialising in fintech, SaaS and edtech — crafting intuitive digital experiences through research-led design thinking.",
+    "Senior Product Designer specialized in Fintech, Design System, Building with AI and Working with teams",
   openGraph: {
     title: "Joyce Eboh — Senior Product Designer",
     description:
-      "Senior product designer specialising in fintech, SaaS and edtech.",
+      "Senior Product Designer specialized in Fintech, Design System, Building with AI and Working with teams",
     type: "website",
   },
 };
