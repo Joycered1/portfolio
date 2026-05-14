@@ -55,7 +55,7 @@ function ProjectCard({
   const hasGif = Boolean(project.gif);
   const isGradient = project.thumbnail.startsWith("linear-gradient");
   const poster = project.gif?.replace(".gif", "-poster.jpg");
-  const hasFullPage = false;
+  const hasFullPage = Boolean(project.fullPage);
 
   const inner = (
     <>

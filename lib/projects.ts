@@ -28,6 +28,7 @@ export type Project = {
   type: string;
   thumbnail: string;
   gif?: string;
+  fullPage?: boolean;
   caseStudy: CaseStudy;
 };
 
@@ -164,6 +165,7 @@ export const projects: Project[] = [
     description: "Designing a manual and automatic loan application process for business owners without compromising security.",
     tags: ["Fintech", "Loan", "B2B", "KYB", "Mobile App"],
     type: "Feature case study",
+    fullPage: true,
     thumbnail: "/images/work/fairmoney/thumbnail-hero.png",
     caseStudy: {
       overview: "FairMoney's merchant lending product was designed to simplify and digitise the loan application experience for small and medium-sized businesses (SMEs). The existing process relied heavily on manual operations, paper documentation, fragmented communication, and back-and-forth verification between merchants and loan officers — creating delays, confusion, and operational inefficiencies on both ends. The goal was to bridge the manual loan application process by creating a seamless self-serve onboarding and lending experience that reduced operational friction while improving completion rates and visibility.",
@@ -273,6 +275,7 @@ export const projects: Project[] = [
     description: "How we re-imagined Timon's wide card inventory and positioned the market place for optimum sales per card.",
     tags: ["Vibe coding", "Growth", "Cards", "Landing page"],
     type: "Feature case study",
+    fullPage: true,
     thumbnail: "/images/work/timon-cards/thumbnail-hero.png",
     caseStudy: {
       overview: "This project was a fast-paced growth sprint focused on improving how users discover, purchase, and manage cards within the product.\n\nPreviously, the experience only displayed single cards in a list, leaving users to figure out which option best matched their needs. As Timon's card catalogue expanded across countries, providers, and spending categories, the experience became harder to navigate and less scalable.\n\nWorking closely with the Growth manager, we redesigned the experience in an intensive physical 8-hour sprint focused on making card discovery smarter, more contextual, and easier to adopt.",
