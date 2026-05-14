@@ -48,7 +48,7 @@ export default function DribbbleMarquee() {
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={`/images/dribbble/shot-${String(shot.id).padStart(2, "0")}.png`}
+                src={`/images/dribbble/shot-${String(shot.id).padStart(2, "0")}.jpg`}
                 alt={`UI shot ${shot.id}`}
                 className={styles.img}
                 loading="lazy"
