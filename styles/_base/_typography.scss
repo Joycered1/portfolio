@@ -1,0 +1,19 @@
+/* Albert Sans + Inter are loaded via next/font/google in layout.tsx */
+/* No @font-face needed here */
+
+/* ── Base element typography ───────────────────── */
+body {
+  font-family: var(--font-body);
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+p {
+  line-height: 1.7;
+}

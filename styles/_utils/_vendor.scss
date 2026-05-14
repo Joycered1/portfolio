@@ -1,0 +1,15 @@
+#nprogress {
+	.bar {
+		background-color: $col-white !important;
+		height: 4px !important;
+	}
+
+	.peg {
+		box-shadow: none !important;
+	}
+}
+
+
+.react-calendar {
+	max-width: 25rem !important;
+}

@@ -1,0 +1,221 @@
+.page {
+  padding: calc(var(--section-y) + 8rem) 0 var(--section-y);
+}
+
+/* ── Back link ──────────────────────────────────────── */
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 4rem;
+  transition: color var(--ease);
+  text-decoration: none;
+}
+
+.back:hover {
+  color: var(--text);
+}
+
+/* ── Content column ─────────────────────────────────── */
+.column {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+/* ── Page header ────────────────────────────────────── */
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(3.4rem, 5vw, 5.8rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--text);
+  margin-bottom: 1.6rem;
+}
+
+.tagRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 3.2rem;
+}
+
+.tag {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--text);
+  padding: 0.3rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.8rem;
+  background-color: var(--tag-bg);
+}
+
+/* ── Hero image ─────────────────────────────────────── */
+.hero {
+  width: 100%;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+  margin-bottom: 4.8rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 24rem;
+}
+
+.heroImg {
+  max-width: 100%;
+  display: block;
+}
+
+/* ── Sections ───────────────────────────────────────── */
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.label {
+  font-family: var(--font-body);
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #757575;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.body {
+  font-family: var(--font-body);
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--text);
+  white-space: pre-wrap;
+}
+
+.productInfo {
+  font-family: var(--font-body);
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.9;
+  color: var(--text);
+  white-space: pre-wrap;
+}
+
+/* ── Solution items (text + image) ─────────────────── */
+.solutionItem {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.solutionBody {
+  font-family: var(--font-body);
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--text);
+  white-space: pre-wrap;
+}
+
+.impactGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.subheading {
+  font-family: var(--font-body);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.screensImg {
+  width: 100%;
+  border-radius: var(--radius);
+  display: block;
+  background: var(--surface);
+}
+
+.liveBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  padding: 1.4rem 3.2rem;
+  background: #1a6ef5;
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: 600;
+  border-radius: 10rem;
+  text-decoration: none;
+  transition: background var(--ease), transform var(--ease);
+}
+
+.liveBtn:hover {
+  background: #1058d4;
+  transform: translateY(-0.2rem);
+}
+
+/* ── Prev / Next nav ─────────────────────────────────── */
+.navRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-top: 4.8rem;
+  border-top: 1px solid var(--border);
+  margin-top: 4rem;
+}
+
+.navLink {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  text-decoration: none;
+  max-width: 40rem;
+}
+
+.navLink:last-child {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.navMeta {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.navTitle {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: color var(--ease);
+}
+
+.navLink:hover .navTitle {
+  color: var(--text);
+}
+
+/* ── Responsive ─────────────────────────────────────── */
+@include screenMax("tablet") {
+  .column {
+    max-width: 100%;
+  }
+}
