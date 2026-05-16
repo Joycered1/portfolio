@@ -1,0 +1,12 @@
+/* Last light section — rounded bottom creates the curve over the dark footer */
+.lastSection {
+  position: sticky;
+  z-index: 3;
+  background: var(--bg);
+  border-radius: 0 0 3.2rem 3.2rem;
+  overflow: hidden;
+  /* Extend slightly so the curve sits cleanly above the dark section */
+  padding-bottom: 0.4rem;
+  margin-bottom: -10rem;
+
+}

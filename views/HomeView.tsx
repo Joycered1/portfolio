@@ -7,21 +7,31 @@ import Skills from "@/components/home/Skills/Skills";
 import Contact from "@/components/home/Contact/Contact";
 import LatestNews from "@/components/home/LatestNews/LatestNews";
 import DribbbleMarquee from "@/components/home/DribbbleMarquee/DribbbleMarquee";
+import DarkCapReveal from "@/components/DarkCapReveal/DarkCapReveal";
+import styles from "./HomeView.module.scss";
 
 export default function HomeView() {
   return (
     <>
       <Navbar />
+
+      {/* Main content — rounded bottom on the last section */}
       <main>
         <Hero />
         <Skills />
         <Work />
         <About />
         <LatestNews />
-        <DribbbleMarquee />
-        <Contact />
+        <div className={styles.lastSection}>
+          <DribbbleMarquee />
+        </div>
       </main>
-      <Footer />
+
+      {/* Dark footer cap — slides up into view */}
+      <DarkCapReveal>
+        <Contact />
+        <Footer />
+      </DarkCapReveal>
     </>
   );
 }
