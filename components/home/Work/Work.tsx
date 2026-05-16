@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import CaseStudyModal from "../CaseStudyModal/CaseStudyModal";
@@ -54,8 +54,7 @@ function ProjectCard({
   const [hovered, setHovered] = useState(false);
   const hasGif = Boolean(project.gif);
   const isGradient = project.thumbnail.startsWith("linear-gradient");
-  const poster = project.gif?.replace(".gif", "-poster.jpg");
-  const hasFullPage = Boolean(project.fullPage);
+const hasFullPage = Boolean(project.fullPage);
 
   const inner = (
     <>
@@ -66,7 +65,7 @@ function ProjectCard({
         </span>
         {hasGif ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={hovered ? project.gif : poster} alt={project.title} className={`${styles.thumbnailImg} ${hovered ? styles.zoomed : ""}`} />
+          <img src={project.gif} alt={project.title} className={styles.thumbnailImg} />
         ) : isGradient ? (
           <div className={styles.thumbnailGradient} style={{ background: project.thumbnail }} />
         ) : (
@@ -113,6 +112,15 @@ function ProjectCard({
 /* ─── Work section ───────────────────────────────── */
 export default function Work() {
   const [selected, setSelected] = useState<Project | null>(null);
+
+  useEffect(() => {
+    projects.forEach((p) => {
+      if (p.gif) {
+        const img = new window.Image();
+        img.src = p.gif;
+      }
+    });
+  }, []);
 
   return (
     <section id="work" className={styles.section}>

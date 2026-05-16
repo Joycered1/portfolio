@@ -4,10 +4,15 @@ export type CaseStudyFeature = { title: string; desc: string };
 export type CaseStudySection = {
   label: string;
   text?: string;
+  texts?: string[];
   bullets?: string[];
   features?: CaseStudyFeature[];
   images?: CaseStudyImg[];
   imageLayout?: "grid" | "list";
+  imageFirst?: boolean;
+  youtube?: string;
+  video?: string;
+  links?: { label: string; url: string }[];
 };
 
 export type CaseStudy = {
@@ -539,8 +544,222 @@ export const projects: Project[] = [
     },
   },
   {
-    slug: "kiddypot",
+    slug: "showlove",
     num: "05",
+    title: "Showlove",
+    subtitle: "Gifting Platform",
+    description: "Send gifts to the people you value and care about.",
+    tags: ["Mobile App", "UX Research", "Social", "Nigeria"],
+    type: "Full product case study",
+    thumbnail: "linear-gradient(135deg, #220812 0%, #7a1540 60%, #4d0d28 100%)",
+    gif: "/images/work/showlove/hero.gif",
+    caseStudy: {
+      overview: "Send gifts to the people you value and care about.",
+      role: "Product Designer",
+      sections: [
+        {
+          label: "Project Overview",
+          text: "ShowLove is a mobile app that allows users send gifts to the people they care about from the comfort of their homes. It focuses on gift and gift deliveries, however, it is not restricted to special occasions only. A user can send recurring gifts or fulfil their duties through the app. They can select gifts from the gift categories, which go as low as buying airtime for someone and as high as buying designer brands for them.",
+          images: [
+            { src: "/images/work/showlove/cover.webp", alt: "Showlove cover" },
+          ],
+        },
+        {
+          label: "The Problem",
+          texts: [
+            "The background of a problem:\nThe demand for sending packaged gifts from the convenience of one's own home is constantly increasing, and some individuals have attempted to find methods for automating the gift-sending process. Unfortunately, in Nigeria, the only available gifting vendors primarily operate through social media. Currently, the most viable option for planning a surprise gift for someone is to hire these vendors or to personally plan and send the gift, which can be a time-consuming and arduous task. As a result, many people simply resort to sending cash instead. Additionally, many vendors end up disappointing their customers or causing unnecessary drama.",
+            "To address this issue, Showlove has launched a project aimed at simplifying the process of finding, purchasing, and sending gifts to loved ones directly from one's mobile phone.",
+            "Exploring the problem - (Empathise):\nTo determine whether the problem was worth pursuing, I conducted research using my preferred product development life cycle plan. I initiated the process by brainstorming, which involved actively seeking insights about the user and empathising with their potential needs or challenges.",
+            "My research focused on exploring online vendors and examining customer feedback to identify any patterns of inconvenience that they might be encountering. I also conducted user research by distributing surveys and interviews with potential user groups. These surveys and interviews aimed to understand their typical process for planning and sending gifts to their loved ones, and to determine if our product could address these needs in the long term.",
+          ],
+        },
+        {
+          label: "Sending out surveys",
+          text: "The survey research was done to find out the various platform or favourite medium of sending gifts and gift experiences to people as well as gather an holistic view of their problems or the challenges they encounter with these processes.",
+          images: [
+            { src: "/images/work/showlove/survey.webp", alt: "Survey questions" },
+          ],
+        },
+        {
+          label: "Conducting interviews",
+          text: "The interview was carried out to delve deeper into these reports gotten. I was able to find some willing participants from the survey to discuss with where I gained more insights to the problem and was able to openly discuss with them.",
+          links: [
+            { label: "See interview script and questions here", url: "https://docs.google.com/document/d/1LhiwKjBU_7ud_taHDh0Q_hLC6VBnzLBNBEt2bu-9Tis/edit" },
+          ],
+        },
+        {
+          label: "Solution",
+          text: "The user interviews revealed several insights into the challenges faced by people when planning and sending gifts, and how Showlove's platform can address these challenges. I was able to ideate and gain insight to various openings where Showlove will be able to solve issues and deliver results like:",
+          bullets: [
+            "Convenience and time-saving: Most participants expressed a desire for a more convenient way to send gifts. They noted that the process of planning and delivering gifts can be time-consuming and stressful, especially for those who have busy schedules.\nOPPORTUNITY: Showlove's platform can come in as a time-saving solution that would allow users to easily browse and select gifts, make payments, and have the gift delivered directly to the recipient.",
+            "Variety of gift options: Participants mentioned the limitation of gift options available on their favourite vendors. They noted that having a diverse range of gift options would make it easier to find the perfect gift for their loved ones.\nOPPORTUNITY: Showlove could offer a wide variety of gift and gift experiences which includes food and beverage, fashion, and lifestyle products.",
+            "Security and trust: Users expressed concerns about the security of their personal and financial information when making purchases online.\nOPPORTUNITY: Showlove's platform can leverage this in her brand by portraying as trustworthy and secure, with several users testimonies noting that they felt confident using the platform for their gift-sending needs.",
+            "Delivery options: Participants appreciated the flexibility of a vendor's delivery choices, but some noted that certain vendors only deliver within their state, not outside.\nOPPORTUNITY: Showlove can provide users with the ability to choose the date and location of gift delivery across the entire country. This feature would simplify the process of sending gifts to loved ones residing in different parts of the nation, ensuring that the recipient receives it on the designated date.",
+            "Customer service: Several participants had a similar compliant of poor customer service. We had conversations that emphasised the importance of good customer service when using online platforms and how a lot of Nigerian vendors lacked it.\nOPPORTUNITY: Showlove will leverage this opportunity by making sure her customer service team are responsive, empathetic and helpful, providing assistance with any questions or issues that arises during the gift-sending process and settling any dispute as quick and seamless as possible.",
+          ],
+        },
+        {
+          label: "CONCLUSION",
+          text: "The user interviews revealed that Showlove's platform can address several key challenges faced by our potential users when planning and sending gifts. Its convenience, wide range of gift options, security, delivery options, and customer service were great results synthesized from the empathy map that was created after the interview. These insights created opportunities for feasible positive features that can be used by Showlove to improve the platform and enhance her user experience.",
+        },
+        {
+          label: "Goal Statement",
+          images: [
+            { src: "/images/work/showlove/summary.webp", alt: "Goal statement" },
+          ],
+        },
+        {
+          label: "Information Architecture",
+          texts: [
+            "A product's Information architecture is crucial in designing an intuitive and easy-to-use platform for our users.",
+            "To begin with, I conducted a thorough analysis of our users' needs, behaviours and preferences. This allowed me to create a clear understanding of what information and features we should include in the platform.",
+            "Based on this analysis, I then created a site map and a navigation structure that are logical, consistent and user-friendly. I also created user flows and designed wireframes and prototypes to test and validate the IA with our users. Throughout the process, I kept in mind our goal of providing a simplified way of finding, purchasing, and sending gifts to people from the comfort of one's mobile phone. I ensured that the IA reflects this goal and makes it easy for users to achieve their desired outcomes, making it adaptive for our users growing need as the product evolves.",
+          ],
+          images: [
+            { src: "/images/work/showlove/userflow.webp", alt: "Showlove user flow" },
+          ],
+        },
+        {
+          label: "Onboarding and Authentication",
+          texts: [
+            "Onboarding\nAt Showlove, we've designed an onboarding flow that starts with a splash screen animation and then introduces the user to our awesome app. To make sure our users don't waste any time, we've simplified the process to just two screens. We've put extra effort into making the pages look visually stunning and emphasize the mood for the product - Gifting and making your loved ones happy.",
+            "When users first launch the app, they are asked to either create an account or sign in. Creating an account is super easy - all they need to do is enter their email address, full name, and create a password. After that, they'll be taken to the next page where they can verify their account through a code that will be sent to their email for validation. Once confirmed, they're immediately taken to the home screen.",
+            "For returning users, logging in is even smoother. They just need to authenticate with their password or biometrics, and they're logged in. However, new users who download the app will need to enter their email address and password before they can log in.",
+            "We want our users to have the best experience possible, and we believe our onboarding flow helps us achieve that.",
+          ],
+          youtube: "5BelUxfvwUI",
+        },
+        {
+          label: "Home page & Quicklinks",
+          texts: [
+            "Home page\nThe ShowLove homepage showcases all the exciting features available on the app.",
+            "At the top, users can access their user profile, view notifications for past and upcoming events, and more.",
+            "The quicklinks section has four important tabs: Send Gifts, Pending Gifts (with a Reminders tab), Top Up, and Subscriptions. Users can easily send gifts, add money to their account, and send subscriptions for airtime, data, TV, and crypto top-ups.",
+            "The body of the homepage presents the different categories and types of gifts available to send. For returning users, the app will provide a more personalized experience based on their interests and preferences.",
+            "At the bottom, users can find the Explore, Send Gift (Universal), Wallet, and Love Basket options. These features allow users to easily navigate through the app and send thoughtful gifts to their loved ones.",
+          ],
+          youtube: "3FbMc1N6Sa4",
+        },
+        {
+          label: "Explore",
+          texts: [
+            "Explore\nOn the Explore page, users can discover the wide variety of gift options available on the platform. They can either search for a specific item or use the filters to simplify their choices. They can also narrow down their search based on events or the type of gift they want to send.",
+            "After selecting an item, the user is taken to an overview page where they can choose to send the gift now or continue browsing. If they choose to send the gift immediately, they will be prompted to provide the recipient's details and delivery address, make payment and Showlove takes care of the rest. Once the gift has been delivered, a notification is sent to the user.",
+          ],
+          youtube: "DJTt8NTrLrc",
+        },
+        {
+          label: "Send Gift",
+          texts: [
+            "Send gift\nSending a gift process can be tedious and to make that process less tedious, we worked on an easy flow that helps the user send a one time or recurring gift to their loved ones.",
+          ],
+          youtube: "WAgnQUH6bCk",
+          bullets: [
+            "On the ShowLove homepage, click on \"Send Gift\" from the quicklinks or from the menu at the bottom of the page.",
+            "Browse the available gift categories or use the search function to find the perfect gift.",
+            "Click on the desired gift item to view more details about it, including the price, description, and delivery options.",
+            "If you decide to purchase the gift, click on \"Add to Basket\" to proceed to checkout.",
+            "At the checkout page, you will be prompted to enter the recipient's name, email address, and delivery address.",
+            "Select your payment method, enter your payment details, and click \"Pay Now\" to complete the transaction.",
+            "Once the payment has been processed, ShowLove will handle the rest of the process, including packaging and delivering the gift to the recipient.",
+            "You will receive a notification once the gift has been delivered to the recipient.",
+          ],
+        },
+        {
+          label: "Wallet",
+          texts: [
+            "Wallet\nThe wallet feature on Showlove allows users to add funds to their account which they can use to purchase gifts and subscriptions.",
+            "The wallet section also includes a transaction history where users can view their past transactions and filter by date. They can also view their card details, delete cards, and select their default payment method for charges.",
+            "To add funds, users can simply select the \"Top Up\" button from the homepage and enter their payment details. They can also choose to save their payment details for future use.",
+            "Please note that there may be a processing fee charged by the payment provider when topping up the wallet.",
+          ],
+          youtube: "1yzunplgJHM",
+        },
+        {
+          label: "Love Basket",
+          texts: [
+            "Love basket\nAt Showlove, we have named our shopping cart \"Love Basket\" to fit with our brand identity. Love Basket is divided into two tabs to make it easier for our users to save and send gifts to their loved ones.",
+            "In the first tab, users can see a list of items they have saved while browsing the app. This allows them to keep track of items they are interested in and plan future purchases.",
+            "When the user is ready to send a gift, they can select the item(s) they want to send and move them to the second tab. In this tab, the user can enter the details of the recipient, including their name, address, and any special notes they want to include.",
+            "Users have the option to select a new recipient or use one of their saved beneficiaries for quicker checkout.",
+            "In addition to making the checkout process more efficient, Love Basket also allows users to view their past purchases and order history. Users can filter orders by date and also manage their saved beneficiary details, resend the gift to the recipient again or to someone else.",
+            "We believe Love Basket is a convenient and user-friendly tool that fits with our brand mission to make gifting easy and delightful for everyone.",
+          ],
+          youtube: "Pm-IgqwmAr0",
+        },
+        {
+          label: "Usability Testing",
+          texts: [
+            "I conducted a usability test to evaluate the user experience and usability of the Showlove mobile app prototype.",
+            "During the usability testing, participants performed specific tasks like finding a particular gift or completing a purchase. The goal was to identify any issues or challenges users may face while using the platform and gather feedback for improvement.",
+            "The testing involved observing users as they interacted with the platform and noting any areas of struggle or confusion. Users were also asked to provide feedback on their experience, including likes, dislikes, and suggestions for improvement.",
+            "Insights from the testing were used to improve the user experience, making it easier for users to find and purchase gifts. This ensures that Showlove continues to provide high-quality service and stays ahead of the competition in the gift trading market.",
+          ],
+          links: [
+            { label: "View script here", url: "https://docs.google.com/document/d/1VD3xvIhnKWxGOmPsgyurYF72lqOovwZ_Eb3vYGom_oc/edit?usp=sharing" },
+          ],
+          images: [
+            { src: "/images/work/showlove/screens-01.webp", alt: "Usability test summary and result" },
+          ],
+        },
+        {
+          label: "Updated design for Occasions (user feedback)",
+          text: "In response to user feedback about the need to add events and receive reminders for them, I made some changes to the platform. I removed the \"send gift\" option from the quick link since it was already available in the menu and replaced it with \"Occasion\". This new feature allows users to view their latest and upcoming events. They can also add new occasions to the list and set a date and time to be reminded about them later. Users do not have to shop for gifts at this point or at all.",
+          youtube: "urS4YfiP7rU",
+        },
+        {
+          label: "Final Outcome",
+          text: "We made necessary design corrections using the insights gathered from the previous usability study. Subsequently, a second round of testing was conducted and the results were positive across all aspects of the platform.",
+          images: [
+            { src: "/images/work/showlove/screens-02.webp", alt: "Final outcome screens" },
+          ],
+        },
+        {
+          label: "Style Guide & Components",
+          text: "For the Showlove project, I created a comprehensive style guide and a set of reusable components. The style guide includes guidelines for typography, color palette, iconography, and layout. It also defines the overall look and feel of the brand, which is fun, cheerful, and modern. The components are designed to be flexible and modular, so they can be easily combined to create different screens and layouts. They include buttons, forms, cards, modals, and other UI elements commonly used in web and mobile apps. The style guide and components help ensure consistency and coherence across the entire product, making it easy for designers and developers to create new features and maintain existing ones.",
+          video: "/images/work/showlove/style-components.mov",
+        },
+        {
+          label: "Landing Page Design",
+          text: "The landing page for Showlove's website is designed to be visually appealing and easy to navigate. The hero section features a beautiful image and a clear call to action, inviting users to Download the App. The page is designed to highlight key features and benefits of the platform, such as the ability to send gifts to loved ones from the comfort of their own home. The layout is clean and modern, with a consistent color scheme and typography that helps to establish a strong brand identity. The result is a landing page that is both engaging with motion and effective, helping to drive conversions and encourage users to explore the platform further.",
+          video: "/images/work/showlove/landing-page.mov",
+          links: [
+            { label: "Link to the prototype here", url: "https://www.figma.com/proto/mcLin3F0rlA7KGzrmFNkKr/ShowLove-(Copy)?type=design&node-id=739-7111&scaling=scale-down-width&page-id=694%3A7489" },
+          ],
+        },
+        {
+          label: "Lessons",
+          text: "Finally, collaboration and communication with stakeholders, team members, and users are crucial to the success of any project. It is important to keep everyone involved in the project informed and engaged throughout the process.",
+          imageFirst: true,
+          images: [
+            { src: "/images/work/showlove/screens-03.webp", alt: "Lessons" },
+          ],
+        },
+        {
+          label: "Next Steps",
+          imageFirst: true,
+          images: [
+            { src: "/images/work/showlove/screens-04.webp", alt: "Next steps" },
+          ],
+        },
+        {
+          label: "Conclusion",
+          text: "Thank you for taking the time to read through this case study on the Showlove project. I hope you found it informative and helpful. If you have any feedback or questions, please feel free to reach out to me at missjoycered@gmail.com . I appreciate your support and look forward to hearing from you.",
+          links: [
+            { label: "missjoycered@gmail.com", url: "mailto:missjoycered@gmail.com" },
+          ],
+        },
+      ],
+      outcomes: [
+        "<strong>2 Rounds</strong><br>Usability testing with measurable improvement",
+        "<strong>Positive</strong><br>Results across all platform aspects in round two",
+      ],
+      tools: ["Figma", "Google Docs"],
+    },
+  },
+  {
+    slug: "kiddypot",
+    num: "06",
     title: "KiddyPot",
     subtitle: "Family Saving & Spending",
     description: "Save and spend money with your kids.",
@@ -581,146 +800,6 @@ export const projects: Project[] = [
       ],
       outcomes: [],
       tools: ["Figma"],
-    },
-  },
-  {
-    slug: "showlove",
-    num: "06",
-    title: "Showlove",
-    subtitle: "Gifting Platform",
-    description: "Send gifts to the people you value and care about.",
-    tags: ["Mobile App", "UX Research", "Social", "Nigeria"],
-    type: "Full product case study",
-    thumbnail: "linear-gradient(135deg, #220812 0%, #7a1540 60%, #4d0d28 100%)",
-    gif: "/images/work/showlove/hero.gif",
-    caseStudy: {
-      overview: "Send gifts to the people you value and care about.",
-      role: "Product Designer",
-      sections: [
-        {
-          label: "Project Overview",
-          text: "ShowLove is a mobile app that allows users send gifts to the people they care about from the comfort of their homes. It focuses on gift and gift deliveries, however, it is not restricted to special occasions only. A user can send recurring gifts or fulfil their duties through the app. They can select gifts from the gift categories, which go as low as buying airtime for someone and as high as buying designer brands for them.",
-          images: [
-            { src: "/images/work/showlove/cover.webp", alt: "Showlove cover" },
-          ],
-        },
-        {
-          label: "The Problem",
-          text: "The demand for sending packaged gifts from the convenience of one's own home is constantly increasing, and some individuals have attempted to find methods for automating the gift-sending process. Unfortunately, in Nigeria, the only available gifting vendors primarily operate through social media. Currently, the most viable option for planning a surprise gift for someone is to hire these vendors or to personally plan and send the gift, which can be a time-consuming and arduous task. As a result, many people simply resort to sending cash instead. Additionally, many vendors end up disappointing their customers or causing unnecessary drama.",
-        },
-        {
-          label: "Sending Out Surveys",
-          text: "The survey research was done to find out the various platform or favourite medium of sending gifts and gift experiences to people as well as gather a holistic view of their problems or the challenges they encounter with these processes.",
-          images: [
-            { src: "/images/work/showlove/survey.webp", alt: "Survey questions" },
-          ],
-        },
-        {
-          label: "Conducting Interviews",
-          text: "The interview was carried out to delve deeper into the reports gathered. I was able to find willing participants from the survey to discuss with, gaining more insights into the problem. The user interviews revealed several key opportunities where Showlove can solve issues and deliver results:",
-          bullets: [
-            "Convenience and time-saving — Showlove's platform can come in as a time-saving solution that allows users to easily browse and select gifts, make payments, and have the gift delivered directly to the recipient.",
-            "Variety of gift options — Showlove could offer a wide variety of gifts including food and beverage, fashion, and lifestyle products.",
-            "Security and trust — Showlove's platform can portray as trustworthy and secure, with users feeling confident using the platform for their gift-sending needs.",
-            "Delivery options — Showlove can provide users with the ability to choose the date and location of gift delivery across the entire country.",
-            "Customer service — Showlove will leverage this opportunity by making sure her customer service team are responsive, empathetic and helpful.",
-          ],
-        },
-        {
-          label: "Goal Statement",
-          images: [
-            { src: "/images/work/showlove/summary.webp", alt: "Goal statement" },
-          ],
-        },
-        {
-          label: "Information Architecture",
-          text: "A product's Information Architecture is crucial in designing an intuitive and easy-to-use platform for our users. I conducted a thorough analysis of our users' needs, behaviours and preferences. This allowed me to create a clear understanding of what information and features to include. Based on this analysis, I created a site map and a navigation structure that are logical, consistent and user-friendly. I also created user flows, wireframes and prototypes to test and validate the IA with our users.",
-          images: [
-            { src: "/images/work/showlove/userflow.webp", alt: "Showlove user flow" },
-          ],
-        },
-        {
-          label: "Onboarding and Authentication",
-          text: "At Showlove, we've designed an onboarding flow that starts with a splash screen animation and then introduces the user to the app. To make sure our users don't waste any time, we've simplified the process to just two screens. When users first launch the app, they are asked to either create an account or sign in. Creating an account requires email address, full name, and a password — then email verification. For returning users, logging in requires password or biometrics authentication.",
-        },
-        {
-          label: "Home Page & Quicklinks",
-          text: "The ShowLove homepage showcases all the exciting features available on the app. At the top, users can access their user profile and view notifications. The quicklinks section has four important tabs: Send Gifts, Pending Gifts (with a Reminders tab), Top Up, and Subscriptions. The body presents the different categories and types of gifts available. For returning users, the app provides a more personalized experience based on their interests and preferences.",
-        },
-        {
-          label: "Explore",
-          text: "On the Explore page, users can discover the wide variety of gift options available on the platform. They can either search for a specific item or use the filters to simplify their choices. They can also narrow down their search based on events or the type of gift they want to send. After selecting an item, the user is taken to an overview page where they can choose to send the gift now or continue browsing.",
-        },
-        {
-          label: "Send Gift",
-          text: "Sending a gift process can be tedious and to make that process less tedious, we worked on an easy flow that helps the user send a one-time or recurring gift to their loved ones.",
-          bullets: [
-            "Browse the available gift categories or use the search function to find the perfect gift.",
-            "Click on the desired gift item to view more details, including price, description, and delivery options.",
-            "Click on 'Add to Basket' to proceed to checkout.",
-            "At checkout, enter the recipient's name, email address, and delivery address.",
-            "Select your payment method, enter your payment details, and click 'Pay Now' to complete.",
-            "ShowLove will handle the rest — packaging and delivering the gift to the recipient.",
-            "You will receive a notification once the gift has been delivered.",
-          ],
-        },
-        {
-          label: "Wallet",
-          text: "The wallet feature on Showlove allows users to add funds to their account which they can use to purchase gifts and subscriptions. The wallet section also includes a transaction history where users can view their past transactions and filter by date. They can also view their card details, delete cards, and select their default payment method for charges.",
-        },
-        {
-          label: "Love Basket",
-          text: "At Showlove, we have named our shopping cart \"Love Basket\" to fit with our brand identity. Love Basket is divided into two tabs: a list of saved items while browsing, and a send-now tab for items ready to go. Users can enter recipient details, select from saved beneficiaries for quicker checkout, view past purchases and order history, and resend a gift to the same or a different recipient.",
-        },
-        {
-          label: "Usability Testing",
-          text: "I conducted a usability test to evaluate the user experience and usability of the Showlove mobile app prototype. During the usability testing, participants performed specific tasks like finding a particular gift or completing a purchase. The goal was to identify any issues or challenges users may face while using the platform and gather feedback for improvement.",
-          images: [
-            { src: "/images/work/showlove/screens-01.webp", alt: "Usability test summary" },
-          ],
-        },
-        {
-          label: "Updated Design — Occasions (User Feedback)",
-          text: "In response to user feedback about the need to add events and receive reminders for them, I made some changes to the platform. I removed the 'Send Gift' option from the quicklink and replaced it with 'Occasions'. This new feature allows users to view their latest and upcoming events, add new occasions to the list, and set a date and time to be reminded — without having to shop for gifts immediately.",
-        },
-        {
-          label: "Final Outcome",
-          text: "We made necessary design corrections using the insights gathered from the previous usability study. Subsequently, a second round of testing was conducted and the results were positive across all aspects of the platform.",
-          images: [
-            { src: "/images/work/showlove/screens-02.webp", alt: "Final outcome screens" },
-          ],
-        },
-        {
-          label: "Style Guide & Components",
-          text: "For the Showlove project, I created a comprehensive style guide and a set of reusable components. The style guide includes guidelines for typography, color palette, iconography, and layout. It also defines the overall look and feel of the brand, which is fun, cheerful, and modern. The components are designed to be flexible and modular, so they can be easily combined to create different screens and layouts.",
-        },
-        {
-          label: "Landing Page Design",
-          text: "The landing page for Showlove's website is designed to be visually appealing and easy to navigate. The hero section features a beautiful image and a clear call to action, inviting users to Download the App. The page is designed to highlight key features and benefits of the platform. The layout is clean and modern, with a consistent color scheme and typography that helps to establish a strong brand identity.",
-        },
-        {
-          label: "Lessons",
-          text: "Finally, collaboration and communication with stakeholders, team members, and users are crucial to the success of any project. It is important to keep everyone involved in the project informed and engaged throughout the process.",
-          images: [
-            { src: "/images/work/showlove/screens-03.webp", alt: "Lessons" },
-          ],
-        },
-        {
-          label: "Next Steps",
-          images: [
-            { src: "/images/work/showlove/screens-04.webp", alt: "Next steps" },
-          ],
-        },
-        {
-          label: "Conclusion",
-          text: "Thank you for taking the time to read through this case study on the Showlove project. I hope you found it informative and helpful. If you have any feedback or questions, please feel free to reach out to me at missjoycered@gmail.com. I appreciate your support and look forward to hearing from you.",
-        },
-      ],
-      outcomes: [
-        "<strong>2 Rounds</strong><br>Usability testing with measurable improvement",
-        "<strong>Positive</strong><br>Results across all platform aspects in round two",
-      ],
-      tools: ["Figma", "Google Docs"],
     },
   },
   // {

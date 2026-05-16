@@ -95,11 +95,36 @@ export default function ProjectDetail({ project }: { project: Project }) {
 
           {/* Main content */}
           <div className={styles.content}>
-            {cs.sections.map((section, i) => (
+            {cs.sections.map((section, i) => {
+              const images = section.images && section.images.length > 0 ? (
+                section.imageLayout === "list" ? (
+                  <div className={styles.screensList}>
+                    {section.images.map((img, j) => (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img key={j} src={img.src} alt={img.alt} className={styles.screensListImg} loading="lazy" />
+                    ))}
+                  </div>
+                ) : (
+                  <div className={styles.screensGrid} data-count={Math.min(section.images.length, 2)}>
+                    {section.images.map((img, j) => (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img key={j} src={img.src} alt={img.alt} className={styles.screenImg} loading="lazy" />
+                    ))}
+                  </div>
+                )
+              ) : null;
+
+              return (
               <div key={i} className={styles.section}>
                 <span className={styles.sectionLabel}>{section.label}</span>
 
+                {section.imageFirst && images}
+
                 {section.text && <p className={styles.sectionText}>{section.text}</p>}
+
+                {section.texts && section.texts.map((t, j) => (
+                  <p key={j} className={styles.sectionText}>{t}</p>
+                ))}
 
                 {section.bullets && section.bullets.length > 0 && (
                   <ul className={styles.list}>
@@ -123,25 +148,53 @@ export default function ProjectDetail({ project }: { project: Project }) {
                   </div>
                 )}
 
-                {section.images && section.images.length > 0 && (
-                  section.imageLayout === "list" ? (
-                    <div className={styles.screensList}>
-                      {section.images.map((img, j) => (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img key={j} src={img.src} alt={img.alt} className={styles.screensListImg} loading="lazy" />
-                      ))}
-                    </div>
-                  ) : (
-                    <div className={styles.screensGrid} data-count={Math.min(section.images.length, 2)}>
-                      {section.images.map((img, j) => (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img key={j} src={img.src} alt={img.alt} className={styles.screenImg} loading="lazy" />
-                      ))}
-                    </div>
-                  )
+                {section.links && section.links.length > 0 && (
+                  <div className={styles.sectionLinks}>
+                    {section.links.map((l, j) => (
+                      <a
+                        key={j}
+                        href={l.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.sectionLink}
+                      >
+                        {l.label}
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden>
+                          <path d="M2 10L10 2M4.5 2H10v5.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </a>
+                    ))}
+                  </div>
                 )}
+
+                {section.video && (
+                  <video
+                    src={section.video}
+                    className={styles.sectionVideo}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                  />
+                )}
+
+                {section.youtube && (
+                  <div className={styles.videoWrap}>
+                    <iframe
+                      src={`https://www.youtube.com/embed/${section.youtube}`}
+                      title={section.label}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className={styles.video}
+                      loading="lazy"
+                    />
+                  </div>
+                )}
+
+                {!section.imageFirst && images}
               </div>
-            ))}
+            );
+            })}
 
             {cs.outcomes.length > 0 && (
               <div className={styles.section}>
