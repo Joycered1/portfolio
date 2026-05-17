@@ -62,9 +62,9 @@
 }
 
 .card:hover {
+  border-color: var(--text-muted);
+  box-shadow: var(--shadow);
   transform: translateY(-0.4rem);
-  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.3);
-  border-color: transparent;
 }
 
 /* ── Thumbnail (top of card, always visible) ─────── */
@@ -86,7 +86,7 @@
 }
 
 .card:hover .thumbnail img {
-  transform: scale(1.04);
+  transform: scale(1.05);
 }
 
 /* ── Card content ─────────────────────────────────── */

@@ -1,7 +1,7 @@
 .section {
   padding: var(--section-y) 0;
   background: var(--bg);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--divider);
 }
 
 [data-theme="light"] .section {
