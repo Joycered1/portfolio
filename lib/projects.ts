@@ -108,14 +108,14 @@ export const projects: Project[] = [
           label: "2. Ordering and Activating a Card",
           text: "We made the strategic decision to include card ordering in the onboarding stage. This helped avoid attracting users who would test the product and churn, and enabled us to gather accurate MVP validation data from committed users.",
           images: [
-            { src: "/images/work/timon/card-order.webp", alt: "Card ordering and activation screens" },
+            { src: "/images/work/timon/wallet.webp", alt: "Card ordering and activation screens" },
           ],
         },
         {
           label: "3. Multi Currency Wallet System",
           text: "This system allows users to receive and send money between their local and foreign currencies with low charges. We ensured the experience was secure and seamless across multiple currency transactions.",
           images: [
-            { src: "/images/work/timon/wallet.webp", alt: "Multi-currency wallet screens" },
+            { src: "/images/work/timon/card-order.webp", alt: "Multi-currency wallet screens" },
           ],
         },
         {
@@ -123,13 +123,6 @@ export const projects: Project[] = [
           text: "Timon offers competitive market rates for currency conversion. Before any conversion, users see the current exchange rate, any applicable charges, and the final converted amount. Once confirmed, the transfer completes immediately to the destination wallet.",
           images: [
             { src: "/images/work/timon/convert.webp", alt: "Currency conversion flow" },
-          ],
-        },
-        {
-          label: "Light and Dark Mode",
-          text: "Great to note — this app also caters beautifully for both light and dark mode interfaces!",
-          images: [
-            { src: "/images/work/timon/dark-mode.webp", alt: "Light and dark mode screens" },
           ],
         },
         {
@@ -144,6 +137,13 @@ export const projects: Project[] = [
           text: "Users can configure their profile information, access account details, set notification preferences, contact customer support, leave app reviews, and manage their security settings — all from one place.",
           images: [
             { src: "/images/work/timon/settings.webp", alt: "Settings and management screens" },
+          ],
+        },
+        {
+          label: "Light and Dark Mode",
+          text: "Great to note — this app also caters beautifully for both light and dark mode interfaces!",
+          images: [
+            { src: "/images/work/timon/dark-mode.webp", alt: "Light and dark mode screens" },
           ],
         },
         {

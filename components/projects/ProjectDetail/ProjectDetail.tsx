@@ -25,7 +25,6 @@ export default function ProjectDetail({ project }: { project: Project }) {
   const prev = idx > 0 ? projects[idx - 1] : null;
   const next = idx < projects.length - 1 ? projects[idx + 1] : null;
   const isGradient = project.thumbnail.startsWith("linear-gradient");
-  const heroPoster = project.gif?.replace(".gif", "-poster.jpg");
 
   return (
     <div className={styles.page}>
@@ -37,11 +36,11 @@ export default function ProjectDetail({ project }: { project: Project }) {
           All projects
         </Link>
 
-        {/* Hero */}
+        {/* Hero — always play the GIF if one exists */}
         <div className={styles.hero}>
-          {heroPoster ? (
+          {project.gif ? (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={heroPoster} alt={project.title} className={styles.heroImg} />
+            <img src={project.gif} alt={project.title} className={styles.heroImg} />
           ) : isGradient ? (
             <div className={styles.heroGradient} style={{ background: project.thumbnail }} />
           ) : (
