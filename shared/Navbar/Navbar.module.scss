@@ -148,7 +148,7 @@
   margin-top: 1.6rem;
 }
 
-.drawer a {
+.drawer a:not(.cta) {
   font-size: 1.7rem;
   font-weight: 500;
   color: var(--text-secondary);
@@ -156,7 +156,7 @@
   transition: color var(--ease);
 }
 
-.drawer a:hover {
+.drawer a:not(.cta):hover {
   color: var(--text);
 }
 
