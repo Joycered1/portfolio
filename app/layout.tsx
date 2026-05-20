@@ -22,12 +22,32 @@ export const metadata: Metadata = {
   title: "Joyce Eboh — Senior Product Designer",
   description:
     "Senior Product Designer specialized in Fintech, Design System, Building with AI and Working with teams",
-  openGraph: {
-    title: "Joyce Eboh — Senior Product Designer",
-    description:
-      "Senior Product Designer specialized in Fintech, Design System, Building with AI and Working with teams",
-    type: "website",
-  },
+  
+	openGraph: {
+		type: "website",
+		locale: "en_US",
+		url: 'https://joycered.com',
+		siteName: "Joycered",
+		title: "Joyce Eboh — Senior Product Designer",
+		description:
+			"Senior Product Designer specialized in Fintech, Design System, Building with AI and Working with teams",
+		images: [
+			{
+				url: "https://joycered.com/images/share-card.png",
+				width: 1200,
+				height: 630,
+				alt: "Joyce Eboh — Senior Product Designer",
+			},
+		],
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Joyce Eboh — Senior Product Designer",
+		description:
+			"Senior Product Designer specialized in Fintech, Design System, Building with AI and Working with teams",
+		images: ["https://joycered.com/images/share-card.png"],
+		creator: "@joycered",
+	},
 };
 
 const themeScript = `
